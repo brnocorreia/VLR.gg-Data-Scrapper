@@ -1,8 +1,8 @@
 from core.database import conn, cur, conn_sqlalchemy
 from scrapper.match_info import match_info
 
-table_create_sql = '''
-CREATE TABLE IF NOT EXISTS partida (
+table_partida_create_sql = '''
+CREATE TABLE IF NOT EXISTS partidas (
     id SERIAL NOT NULL,
     evento VARCHAR(255) NOT NULL,
     data_partida VARCHAR(40) NOT NULL,
@@ -13,8 +13,8 @@ CREATE TABLE IF NOT EXISTS partida (
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    cur.execute(table_create_sql)
-    cur.execute('TRUNCATE TABLE partida')
+    cur.execute(table_partida_create_sql)
+    cur.execute('TRUNCATE TABLE partidas')
     conn.commit()
     cur.close()
 
