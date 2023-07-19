@@ -23,4 +23,4 @@ if __name__ == '__main__':
     df.to_sql('partida', con=conn_sqlalchemy, if_exists='append', index=False)
 
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
