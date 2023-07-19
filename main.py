@@ -1,8 +1,6 @@
 from core.database import conn, cur, conn_sqlalchemy
 from scrapper.match_info import match_info
 
-csv_path = r'C:\Users\bruni\python\github.com\brnocorreia\VLR.gg-Data-Scrapper\test_vlrgg.csv'
-
 table_create_sql = '''
 CREATE TABLE IF NOT EXISTS partida (
     id SERIAL NOT NULL,
